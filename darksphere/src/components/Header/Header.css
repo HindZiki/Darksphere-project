@@ -1,0 +1,125 @@
+.header {
+  width: 100%;
+  height: 100vh; /* Fixe la hauteur à 100% de la fenêtre */
+  margin: 0;
+  background: url('/header_img.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  filter: brightness(1.2); 
+}
+
+.header .debut h1 {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #35d440 !important;
+  font-size: max(2.5vw, 22px);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.header-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  max-width: 50%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 3s;
+  cursor: pointer;
+}
+
+.header-contents h2 {
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  font-size: max(3vw, 22px);
+}
+
+.header-contents p {
+  font-size: max(1.5vw, 14px);
+  color: rgb(7, 7, 7);
+  line-height: 1.6;
+}
+
+.header-contents button {
+  background: transparent;
+  color: rgb(0, 0, 0);
+  color: #080808;
+  border: 2px solid rgb(10, 10, 10);
+  font-size: max(1.2vw, 14px);
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-contents button:hover {
+  background-color: #5c8d54;
+}
+
+@keyframes fadeIn {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+
+
+
+
+
+
+/* === DarkSphere Theme: Dark and Dangerous === */
+
+/* Body Styling */
+/* Keyframes for Glitch Effect */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+  50% {
+    text-shadow: -2px 0 red, 2px 0 cyan;
+  }
+  100% {
+    text-shadow: 2px 0 red, -2px 0 cyan;
+  }
+}
+
+/* Matrix Effect */
+.matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.matrix span {
+  display: block;
+  font-size: 15px;
+  color: #0f0;
+  animation: matrix 3s linear infinite;
+}
+
+@keyframes matrix {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

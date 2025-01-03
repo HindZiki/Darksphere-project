@@ -1,0 +1,148 @@
+/* Variables du thème */
+:root {
+    --primary-bg-color: rgba(0, 0, 0, 0.85); /* Fond sombre et transparent */
+    --secondary-bg-color: white; /* Cases blanches */
+    --accent-color: #337233; /* Vert matrix */
+    --text-color: #333333; /* Texte sombre dans les cases */
+    --muted-text-color: #a4b0be; /* Texte secondaire */
+    --hover-color: #f5fff5; /* Vert lumineux pour survol */
+    --background-image: url('/header_img.png'); /* Image de fond */
+  }
+
+  /* Arrière-plan pleine largeur et hauteur */
+    
+  /* Popup Login */
+  .login-pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Assombrissement général */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Effet flou */
+  }
+  
+  /* Conteneur */
+  .login-pop-container {
+    background-color: var(--primary-bg-color);
+    border-radius: 15px;
+    width: 400px;
+    padding: 25px;
+    box-shadow: 0 0 20px var(--accent-color);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Titre */
+  .login-pop-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-pop-title h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+  }
+  
+  .login-pop-title img {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    filter: brightness(0.9);
+  }
+  
+  /* Inputs */
+  .login-pop-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .login-pop-inputs input {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-bg-color); /* Blanc */
+    border: 1px solid var(--accent-color); /* Bordure verte */
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--text-color); /* Texte sombre */
+    outline: none;
+    transition: border 0.2s, background-color 0.2s;
+  }
+  
+  .login-pop-inputs input:focus {
+    border: 1px solid var(--hover-color);
+    box-shadow: 0 0 5px var(--hover-color);
+  }
+  
+  /* Bouton */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0 0 10px var(--hover-color);
+  }
+  
+  /* Conditions */
+  .login-pop-condition {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .login-pop-condition p {
+    font-size: 12px;
+    color: var(--muted-text-color);
+    line-height: 1.4;
+  }
+  
+  /* Liens */
+  .login-pop p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--muted-text-color);
+  }
+  
+  .login-pop span {
+    color: var(--accent-color);
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.2s;
+  }
+  
+  .login-pop span:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
